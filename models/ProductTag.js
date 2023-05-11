@@ -36,5 +36,3 @@ ProductTag.init(
 );
 
 module.exports = ProductTag;
-
-//delete after push
