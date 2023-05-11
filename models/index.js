@@ -21,22 +21,23 @@ Product.belongstoMany(Tag, {
 // Tags belongToMany Products (through ProductTag)
 
 Product.belongstoMany(Product, {
+  through: ProductTag,
   foreignKey: "tag_id",
 });
 
-Product.belongstoMany(Product, {
+Product.belongsto(Product, {
   foreignKey: "product_id",
 });
 
-Product.belongstoMany(Tag, {
+Product.belongsto(Tag, {
   foreignKey: "product_id",
 });
 
-Product.belongstoMany(ProductTag, {
+Product.belongsto(ProductTag, {
   foreignKey: "product_id",
 });
 
-Product.belongstoMany(ProductTag, {
+Product.hasMany(ProductTag, {
   foreignKey: "tag_id",
 });
 
